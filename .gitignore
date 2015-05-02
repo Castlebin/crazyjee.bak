@@ -12,5 +12,6 @@ RemoteSystemsTempFiles
 .project
 .settings
 
+Servers
 tomcat-web-content
 
