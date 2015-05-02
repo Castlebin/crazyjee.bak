@@ -1,0 +1,16 @@
+#
+target
+*.log
+log
+*~
+
+# eclipse
+.metadata
+RemoteSystemsTempFiles
+.tern-project
+.classpath
+.project
+.settings
+
+tomcat-web-content
+
