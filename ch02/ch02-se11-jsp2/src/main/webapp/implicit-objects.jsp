@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
+<<html>
 <head>
 <title>表达式语言 - 内置对象</title>
 </head>

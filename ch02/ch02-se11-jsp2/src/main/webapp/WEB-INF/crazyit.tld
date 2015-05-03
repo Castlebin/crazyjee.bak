@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_1.xsd"
+	version="2.1">
+	<tlib-version>1.0</tlib-version>
+	<short-name>crazyit</short-name>
+	<!-- 定义该标签库的uri -->
+	<uri>http://castlebin.com/java/taglig/crazyit</uri>
+
+	<!-- 在taglib中使用function标签来进行EL表达式自定义函数的定义 -->
+	<function>
+		<!-- 定义函数名 -->
+		<name>reverse</name>
+		<!-- 函数的实现类 -->
+		<function-class>ch02.se11.Functions</function-class>
+		<!-- 定义函数的实现方法 -->
+		<function-signature>java.lang.String reverse(java.lang.String)</function-signature>
+	</function>
+	<!-- 定义第二个函数 -->
+	<function>
+		<!-- 定义函数名 -->
+		<name>countChar</name>
+		<!-- 函数的实现类 -->
+		<function-class>ch02.se11.Functions</function-class>
+		<!-- 定义函数的实现方法 -->
+		<function-signature>java.lang.String countChar(java.lang.String)</function-signature>
+	</function>
+</taglib>
