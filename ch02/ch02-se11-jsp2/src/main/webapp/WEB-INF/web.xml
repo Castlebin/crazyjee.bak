@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WEB_APP_ID" version="3.1">
+	
+    <!--  配置JSP -->
+    <jsp-config>
+        <jsp-property-group>
+            <!-- url-pattern指定对哪些文件应用配置 -->
+            <url-pattern>/noscript/*</url-pattern>
+            <!-- 忽略表达式语言 -->
+            <el-ignored>true</el-ignored>
+            <!-- 指定页面编码的字符集 -->
+            <page-encoding>UTF-8</page-encoding>
+            <!-- 不允许使用Java脚本 -->
+            <scripting-invalid>true</scripting-invalid>
+            <!-- 隐式导入的页头 -->
+            <include-prelude>/inc/top.jspf</include-prelude>
+            <!-- 隐式导入的页尾 -->
+            <include-coda>/inc/bottom.jspf</include-coda>
+        </jsp-property-group>
+        <jsp-property-group>
+            <url-pattern>/inc/*</url-pattern>
+            <el-ignored>false</el-ignored>
+            <page-encoding>UTF-8</page-encoding>
+            <scripting-invalid>true</scripting-invalid>
+        </jsp-property-group>
+    </jsp-config>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
