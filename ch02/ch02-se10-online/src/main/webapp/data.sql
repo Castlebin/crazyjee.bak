@@ -1,8 +1,4 @@
-drop database online_inf;
-
-create database online_inf;
-
-use online_inf;
+use crazyjee;
 
 create table online_inf
 (
