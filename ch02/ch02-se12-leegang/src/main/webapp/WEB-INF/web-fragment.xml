@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee  
+    http://xmlns.jcp.org/xml/ns/javaee/web-fragment_3_1.xsd" version="3.1">
+    <!-- 指定该Web模块的唯一标识 -->
+    <name>leegang</name>
+    <listener>
+        <listener-class>ch02.se12.LeeListener</listener-class>
+    </listener>
+    <ordering>
+        <after>crazyit</after>
+    </ordering>
+</web-fragment>
