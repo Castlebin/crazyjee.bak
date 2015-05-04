@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+	
+    <!-- 配置Spring支持国际化，messageSource Bean是Spring进行国际化配置的bean -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <!-- Spring容器调用messageSource Bean的setBasenames()方法，来设置Spring使用的国际化资源文件，
+        该方法接收一个数组参数，使用list元素配置 -->
+        <property name="basenames">
+            <list>
+                <!-- 格式为，目录+资源文件的前缀。i18n/message即表示i18n目录下前缀为message的资源文件 -->
+                <value>i18n/message</value>
+                <!-- 如果有多个国际化资源文件，继续列在下面，1,2,3,4 -->
+            </list>
+        </property>
+    </bean>
+    
+    <!-- Spring容器会检查容器中所有的bean，如果发现某个bean实现了ApplicationContextAware接口，
+            那么Spring容器在创建该bean后，会自动调用它的setApplicationContext()方法，
+            调用该方法时，会将容器本生作为参数传入。
+            这就是为什么我们不用在这里为person对象显式声明注入ctx成员，而person对象可以正常在Spring容器中完成初始化的原因 -->
+    <bean id="person" class="ch07.se04.service.Person" />
+        
+</beans>
