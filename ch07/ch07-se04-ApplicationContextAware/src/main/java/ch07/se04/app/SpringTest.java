@@ -14,4 +14,5 @@ public class SpringTest {
 		Person p = ctx.getBean("person", Person.class);
 		p.sayHi("孙悟空");
 	}
+	
 }
