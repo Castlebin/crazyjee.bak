@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+	
+    <!-- 定义名为person的一个对象，它依赖于一个axe对象。spring进行自动装配和注入 -->
+    <bean id="person" class="ch07.se02.service.Person">
+        <property name="axe" ref="axe" />
+    </bean>
+    <bean id="axe" class="ch07.se02.service.Axe" />
+    
+    <!-- 定义另外两个普通的bean，使用Java自己的原生的类 -->
+    <bean id="win" class="javax.swing.JFrame" />
+    <bean id="date" class="java.util.Date" />
+    
+</beans>
