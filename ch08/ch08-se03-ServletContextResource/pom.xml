@@ -3,8 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.heller.crazyjee</groupId>
-	<artifactId>ch08-se03-ClassPathResource</artifactId>
+	<artifactId>ch08-se03-ServletContextResource</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
+	<packaging>war</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,7 +28,7 @@
 	</properties>
 
 	<dependencies>
-<!-- 	<dependency>
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${servlet-api.version}</version>
@@ -40,31 +41,11 @@
 			<scope>provided</scope>
 		</dependency>
 		
-		JSTL
 		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>taglibs</groupId>
-			<artifactId>standard</artifactId>
-			<version>1.1.2</version>
-		</dependency>
-		
-		WebSocket
-		<dependency>
-		    <groupId>javax.websocket</groupId>
-		    <artifactId>javax.websocket-api</artifactId>
-		    <version>1.0</version>
-		</dependency>
-		 -->
-		 
-		<dependency>
-		    <groupId>dom4j</groupId>
-		    <artifactId>dom4j</artifactId>
-		    <version>1.6.1</version>
-		</dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -83,7 +64,11 @@
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
 		</dependency>
-
+        <dependency>
+			<groupId>org.hibernate</groupId>
+   			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-core</artifactId>
@@ -91,14 +76,9 @@
 		</dependency> -->
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
+			<artifactId>spring-web</artifactId>
 			<version>${springframework.version}</version>
-		</dependency><!-- 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-   			<artifactId>hibernate-core</artifactId>
-			<version>${hibernate.version}</version>
-		</dependency> -->
+		</dependency>		
 	</dependencies>
 
 	<build>
