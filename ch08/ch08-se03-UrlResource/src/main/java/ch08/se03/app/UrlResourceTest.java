@@ -10,11 +10,10 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.springframework.core.io.UrlResource;
 
-
 public class UrlResourceTest {
 	
 	public static void main(String[] args) throws DocumentException, IOException {		
-		// 创建一个Resource对象，指定从文件系统中读取资源
+		// 创建一个Resource对象，从url读取资源
 		UrlResource ur = new UrlResource("file:src/main/resources/book.xml");
 		// 获取该资源的简单信息
 		System.out.println(ur.getFilename());

@@ -8,20 +8,23 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.Resource;
 
-public class ClassPathResourceTest {
+public class ResourceLoaderTest {
 	
-	public static void main(String[] args) throws DocumentException, IOException {		
-		// 创建一个Resource对象，指定从类加载路径中读取资源
-		ClassPathResource cr = new ClassPathResource("book.xml");
+	public static void main(String[] args) throws DocumentException, IOException {
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
+		// 创建一个Resource对象，使用ApplicationContext来获取资源
+		Resource res = ctx.getResource("book.xml");
 		// 获取该资源的简单信息
-		System.out.println(cr.getFilename());
-		System.out.println(cr.getDescription());
+		System.out.println(res.getFilename());
+		System.out.println(res.getDescription());
 		
 		// 创建基于SAX的Dom4j解析器
 		SAXReader reader = new SAXReader();
-		Document doc = reader.read(cr.getFile());
+		Document doc = reader.read(res.getFile());
 		// 获取根元素
 		Element el = doc.getRootElement();
 		List l = el.elements();
