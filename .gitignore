@@ -12,6 +12,10 @@ RemoteSystemsTempFiles
 .project
 .settings
 
+# idea
+.idea
+*.iml
+
 Servers
 tomcat-web-content
 

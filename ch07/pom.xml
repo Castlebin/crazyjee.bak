@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.heller.crazyjee</groupId>
+	<artifactId>ch07</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>ch07</name>
+
+	<modules>
+		<module>ch07-se02-springQs</module>
+		<module>ch07-se03-constructor</module>
+		<module>ch07-se03-setter</module>
+		<module>ch07-se04-ApplicationContextAware</module>
+		<module>ch07-se04-EventHandler</module>
+		<module>ch07-se04-i18n</module>
+		<module>ch07-se05-requestScope</module>
+	</modules>
+</project>
