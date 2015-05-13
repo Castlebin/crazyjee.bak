@@ -8,8 +8,6 @@
     <constant name="struts.devMode" value="true"/>
     <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
     <package name="lee" extends="struts-default">
-        <!-- 定义处理用户请求的Action，该Action的class属性不是实际处理类
-            , 而是Spring容器中的Bean实例的ID -->
         <action name="login" class="ch08.se07.action.LoginAction">
             <!-- 为两个逻辑视图配置视图页面 -->
             <result name="error">/WEB-INF/content/error.jsp</result>

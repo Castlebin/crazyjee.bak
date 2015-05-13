@@ -44,5 +44,6 @@
 		<module>ch08-se06-tx</module>
 		<module>ch08-se07-autowire</module>
 		<module>ch08-se07-spring-manage-action</module>
+		<module>ch08-se08-booksys</module>
 	</modules>
 </project>
