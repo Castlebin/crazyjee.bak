@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!-- 配置了系列常量 -->
+    <constant name="struts.i18n.encoding" value="utf-8"/>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <package name="helelr" extends="struts-default">
+        <action name="addBook" class="ch08.se08.booksys.action.BookAction"
+            method="add">
+            <!-- 添加成功，列出所有图书 -->
+            <result type="chain">listBooks</result>
+            <!-- 失败，重写跳转到添加图书表单页 -->
+            <result name="error">/WEB-INF/content/bookForm.jsp</result>
+        </action>
+        <action name="listBooks" class="ch08.se08.booksys.action.BookAction"
+            method="list">
+            <result>/WEB-INF/content/listBooks.jsp</result>
+        </action>
+        <action name="deleteBook" class="ch08.se08.booksys.action.BookAction"
+            method="delete">
+            <result type="chain">listBooks</result>
+        </action>
+        <action name="*">
+            <result>/WEB-INF/content/{1}.jsp</result>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+    http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+    
+    <!-- 为持久化单元指定名称，并通过transaction-type属性指定实物类型，
+        JPA中事务类型有两种，分别是JTA、RESOURCE_LOCAL -->
+    <persistence-unit name="books_pu" transaction-type="RESOURCE_LOCAL">
+        <!-- 列出该应用需要访问到的所有Entity类，也可以用<mapping-file>或<jar-file>元素来定义 -->
+        <class>ch08.se09.booksys.domain.Book</class>
+        <!-- properties元素用于为特定的JPA实现(Hibernate、TopLink等)配置属性 -->
+        <!-- 下面列举的是Hibernate JPA可以配置的部分属性 -->
+        <properties>
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

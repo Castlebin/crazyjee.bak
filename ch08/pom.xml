@@ -45,5 +45,6 @@
 		<module>ch08-se07-autowire</module>
 		<module>ch08-se07-spring-manage-action</module>
 		<module>ch08-se08-booksys</module>
+		<module>ch08-se09-booksys-jpa</module>
 	</modules>
 </project>
