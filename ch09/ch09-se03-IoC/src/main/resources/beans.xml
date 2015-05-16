@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans>
+    <bean id="computer" class="ch09.se03.Computer">
+        <!-- 设置属性 -->
+        <property name="name" value="孙悟空的电脑" />
+        <property name="out" ref="betterPrinter" />
+    </bean>
+
+    <bean id="printer" class="ch09.se03.Printer" />
+    <bean id="betterPrinter" class="ch09.se03.BetterPrinter" />
+
+    <!-- 配置一个prototype行为的实例 -->
+    <bean id="now" class="java.util.Date" scope="prototype" />
+</beans>
