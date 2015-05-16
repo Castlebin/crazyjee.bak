@@ -11,5 +11,6 @@
 
 	<modules>
 		<module>ch09-se03-Singleton</module>
+		<module>ch09-se03-SimleFactory</module>
 	</modules>
 </project>
