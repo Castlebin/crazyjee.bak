@@ -95,7 +95,7 @@ public class BaseDaoHibernate3Impl<T> extends HibernateDaoSupport implements Bas
 					SQLException {
 				Query query = session.createQuery(hql);
 				for(int i=0; i<params.length; i++) {
-					query.setParameter(i+"", params[0]);
+					query.setParameter(i+"", params[i]);
 				}
 				@SuppressWarnings("unchecked")
 				List<T> result = query.setFirstResult((pageNo - 1) * pageSize)
