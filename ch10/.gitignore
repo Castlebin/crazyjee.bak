@@ -1,0 +1,25 @@
+#
+target
+*.log
+log
+*~
+
+# eclipse
+.metadata
+RemoteSystemsTempFiles
+.tern-project
+.classpath
+.project
+.settings
+
+# idea
+.idea
+*.iml
+
+Servers
+tomcat-web-content
+
+HRSystem_Eclipse
+QuartzQs
+
+
