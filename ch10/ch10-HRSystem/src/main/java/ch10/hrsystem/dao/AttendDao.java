@@ -13,7 +13,7 @@ public interface AttendDao extends BaseDao<Attend> {
 	 * 根据员工、月份 查询该员工的打卡记录
 	 * @param month 月份，月份是形如2012-02格式的字符串
 	 */
-	List<Attend> findByEmpAndMouth(Employee emp, String mouth);
+	List<Attend> findByEmpAndMonth(Employee emp, String month);
 	
 	/**
 	 * 根据员工、日期 查询该员工的打卡记录合集
