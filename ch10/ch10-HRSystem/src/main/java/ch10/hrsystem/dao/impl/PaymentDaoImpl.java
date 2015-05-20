@@ -28,18 +28,13 @@ public class PaymentDaoImpl extends BaseDaoHibernate4<Payment> implements
 	 *            领薪的员工
 	 * @return 指定员工、指定月份的月结薪水
 	 */
-	public Payment findByMonthAndEmp(String payMonth, Employee emp) {
+	@Override
+	public Payment findByEmpAndMonth(Employee emp, String payMonth) {
 		List<Payment> pays = find("select p from Payment as p where"
 				+ " p.employee=?0 and p.payMonth=?1", emp, payMonth);
 		if (pays != null && pays.size() > 0) {
 			return pays.get(0);
 		}
-		return null;
-	}
-
-	@Override
-	public Payment findByEmpAndMonth(Employee emp, String payMonth) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

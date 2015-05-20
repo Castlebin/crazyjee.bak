@@ -1,6 +1,7 @@
 package ch10.hrsystem.vo;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * Description: <br/>
@@ -25,10 +26,10 @@ public class EmpBean implements Serializable {
 	}
 
 	// 初始化全部成员变量的构造器
-	public EmpBean(String empName, String empPass, double amount) {
+	public EmpBean(String empName, String empPass, BigDecimal bigDecimal) {
 		this.empName = empName;
 		this.empPass = empPass;
-		this.amount = amount;
+		this.amount = bigDecimal.doubleValue();
 	}
 
 	// empName的setter和getter方法
