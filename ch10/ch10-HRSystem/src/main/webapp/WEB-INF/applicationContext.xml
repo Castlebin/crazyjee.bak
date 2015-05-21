@@ -59,7 +59,7 @@
 	    </property>
 	</bean>
 	<!-- 执行实际的调度 -->
-	<bean class="org.springframework.scheduling.quartz.ScheduleFactoryBean">
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 	    <property name="triggers">
 	        <list>
 	            <ref bean="cronTriggerPay" />
