@@ -9,6 +9,25 @@
 	<constant name="struts.devMode" value="true"/>
 	
 	<package name="default" extends="struts-default">
+	    <interceptors>
+			<!-- 配置普通员工角色的权限检查拦截器 -->
+			<interceptor name="empAuth"	class=
+			"ch10.hrsystem.action.authority.EmpAuthorityInterceptor"/>
+			<!-- 配置经理角色的权限检查拦截器 -->
+			<interceptor name="mgrAuth"	class=
+			"ch10.hrsystem.action.authority.MgrAuthorityInterceptor"/>
+			<!-- 配置普通员工的默认的拦截器栈 -->
+			<interceptor-stack name="empStack">
+				<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="empAuth"/>
+			</interceptor-stack>
+			<!-- 配置经理的默认的拦截器栈 -->
+			<interceptor-stack name="mgrStack">
+				<interceptor-ref name="defaultStack"/>
+				<interceptor-ref name="mgrAuth"/>
+			</interceptor-stack>
+		</interceptors>
+		
 	    <!-- 定义全局Result映射 -->
 		<global-results>
 			<!-- 定义sql、root两个异常对应的视图页 -->
