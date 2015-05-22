@@ -16,7 +16,7 @@
         destroy-method="close"
         p:driverClass="com.mysql.jdbc.Driver"
         p:jdbcUrl="jdbc:mysql://localhost:3306/crazyjee"
-        p:user="root"
+        p:user="heller"
         p:password="123456"
         p:maxPoolSize="10"
         p:minPoolSize="3"
