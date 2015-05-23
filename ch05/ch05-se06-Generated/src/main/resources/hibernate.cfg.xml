@@ -20,7 +20,7 @@
         <property name="hibernate.c3p0.validate">true</property>
 
         <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
-        <property name="hbm2ddl.auto">create</property><!--①-->
+        <property name="hbm2ddl.auto">update</property><!--①-->
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         

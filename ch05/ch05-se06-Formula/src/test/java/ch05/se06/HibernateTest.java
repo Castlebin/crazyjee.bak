@@ -33,6 +33,7 @@ public class HibernateTest {
 		
 		// 实体现在处于持久化状态，所以现在已经有了id了
 		System.out.println(n.getId());
+		System.out.println(n.getFullContent());
 		
 		// 提交事务
 		tx.commit();
