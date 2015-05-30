@@ -13,7 +13,14 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import ch08.se08.common.dao.BaseDao;
 
 public class BaseDaoHibernate3Impl<T> extends HibernateDaoSupport implements BaseDao<T> {
-
+	private Class<T> entityClazz;
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public T get(Serializable id) {
+		return (T)getSessionFactory().getCurrentSession().get(entityClazz, id);
+	}
+	
 	@Override
 	public T get(Class<T> entityClazz, Serializable id) {
 		return getHibernateTemplate().get(entityClazz, id);

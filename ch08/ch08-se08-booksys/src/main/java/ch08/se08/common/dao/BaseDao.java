@@ -6,6 +6,9 @@ import java.util.List;
 public interface BaseDao<T> {
 	
 	// 根据ID加载实体
+	T get(Serializable id);
+	
+	// 根据ID加载实体
 	T get(Class<T> entityClazz, Serializable id);
 		
 	// 保存实体

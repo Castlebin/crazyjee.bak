@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- 配置数据库连接信息 -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost/hibernate</property>
+        <property name="connection.username">heller</property>
+        <property name="connection.password">123456</property>
+
+        <!-- 配置数据库连接池信息，使用的是c3p0，这是hibernate默认使用的数据库连接池 -->
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.min_size">1</property>
+        <property name="hibernate.c3p0.timeout">5000</property>
+        <property name="hibernate.c3p0.max_statements">100</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+        <property name="hibernate.c3p0.acquire_increment">2</property>
+        <property name="hibernate.c3p0.validate">true</property>
+
+        <property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <property name="hbm2ddl.auto">create</property><!--①-->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        
+        <!-- 罗列所有持久化类的类名 -->
+        <mapping class="ch06.se01.domain.Person"/>
+        <mapping class="ch06.se01.domain.Address"/>
+    </session-factory>
+</hibernate-configuration>
