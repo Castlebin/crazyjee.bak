@@ -22,7 +22,7 @@
 		<jsp-api.version>2.3.1</jsp-api.version>
 		
 		<struts2.version>2.3.16.3</struts2.version>
-		<hibernate.version>4.3.7.Final</hibernate.version>
+		<hibernate.version>5.4.24.Final</hibernate.version>
 		<springframework.version>4.1.2.RELEASE</springframework.version>
 		<aspectj.version>1.8.5</aspectj.version>
         <ehcache.version>2.10.0</ehcache.version>
